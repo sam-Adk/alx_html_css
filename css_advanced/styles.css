@@ -1,0 +1,499 @@
+/* styles.css - EXACTLY MATCHES THE IMAGE YOU JUST SHOWED - ONLY THIS HERO + PROS SECTION */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap');
+
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Source Sans Pro',sans-serif; background:#0f0e1a; color:white; overflow-x:hidden; }
+
+/* HEADER */
+header nav {
+  position:absolute; top:0; left:0; right:0;
+  padding:30px 80px;
+  display:flex; justify-content:space-between; align-items:center;
+  z-index:1000;
+}
+header img { height:38px; }
+header ul { display:flex; gap:50px; list-style:none; }
+header a { color:white; text-decoration:none; font-weight:600; font-size:14px; text-transform:uppercase; }
+
+/* HERO SECTION - EXACTLY LIKE YOUR IMAGE */
+main > section:first-of-type {
+  min-height:100vh;
+  background:linear-gradient(rgba(15,14,26,0.88), rgba(15,14,26,0.95)),
+              url('assets/images/object.png') center/cover no-repeat fixed;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  text-align:center; padding:0 80px 180px;
+}
+main > section:first-of-type h1 {
+  font-size:140px; font-weight:900; letter-spacing:-8px;
+  margin-bottom:10px; color:white;
+}
+main > section:first-of-type > div:first-child span {
+  font-size:18px; font-weight:600; letter-spacing:8px;
+  margin:0 20px; text-transform:uppercase; opacity:0.9;
+}
+main > section:first-of-type button {
+  margin-top:40px; background:#c271ff; color:white; border:none;
+  padding:14px 38px; border-radius:50px; font-weight:bold; font-size:15px;
+  box-shadow:0 10px 30px rgba(194,113,255,.4); cursor:pointer;
+}
+
+/* LEARN FROM THE PROS - EXACTLY LIKE YOUR IMAGE */
+main > section:first-of-type > div:last-child {
+  margin-top:160px; width:100%;
+}
+main > section:first-of-type h2 {
+  font-size:36px; color:#c271ff; text-align:center;
+  margin-bottom:80px; font-weight:400;
+}
+main > section:first-of-type > div:last-child > div {
+  display:flex; justify-content:center; gap:120px; flex-wrap:nowrap;
+}
+main > section:first-of-type > div:last-child img {
+  width:140px; height:140px; border-radius:50%;
+  object-fit:cover; border:4px solid transparent;
+}
+main > section:first-of-type > div:last-child > div > div:nth-child(2) img { border-color:#ffb8e2; }
+main > section:first-of-type > div:last-child h3 {
+  margin:20px 0 8px; font-size:18px; text-align:center;
+}
+main > section:first-of-type > div:last-child p {
+  font-size:14px; text-align:center; opacity:0.8; font-style:italic;
+}
+
+/* RESPONSIVE */
+@media (max-width:1200px) {
+  main > section:first-of-type > div:last-child > div { gap:80px; }
+}
+@media (max-width:992px) {
+  main > section:first-of-type h1 { font-size:100px; }
+  main > section:first-of-type > div:last-child > div { flex-wrap:wrap; gap:60px; }
+}
+@media (max-width:768px) {
+  header nav { padding:20px 40px; }
+  main > section:first-of-type h1 { font-size:70px; letter-spacing:-4px; }
+  main > section:first-of-type span { font-size:16px; letter-spacing:6px; }
+
+
+}
+
+/* TESTIMONIAL SECTION - EXACTLY LIKE YOUR IMAGE */
+
+main > section:nth-of-type(2) {
+  background: #c271ff;
+  padding: 100px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+/* Person's photo */
+main > section:nth-of-type(2) > div:first-child img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Quote + name */
+main > section:nth-of-type(2) > div:last-child {
+  max-width: 650px;
+}
+
+main > section:nth-of-type(2) blockquote {
+  font-size: 24px;
+  font-style: italic;
+  line-height: 1.6;
+  color: white;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+main > section:nth-of-type(2) blockquote::before {
+  content: '“';
+  font-size: 80px;
+  color: rgba(255,255,255,0.3);
+  position: absolute;
+  left: -40px;
+  top: -20px;
+}
+
+main > section:nth-of-type(2) h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 8px;
+}
+
+main > section:nth-of-type(2) p {
+  font-size: 18px;
+  color: rgba(255,255,255,0.9);
+}
+
+/* Mobile responsive - stacks vertically */
+@media (max-width: 768px) {
+  main > section:nth-of-type(2) {
+    padding: 80px 40px;
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  main > section:nth-of-type(2) blockquote::before {
+    left: 0;
+    top: -40px;
+  }
+}
+
+/* MOST POPULAR TUTORIALS - EXACTLY LIKE YOUR IMAGE */
+
+main > section:nth-of-type(3) {
+  background: white;
+  color: #05012c;
+  padding: 100px 80px;
+  text-align: center;
+}
+
+main > section:nth-of-type(3) h2 {
+  font-size: 36px;
+  color: #05012c;
+  margin-bottom: 80px;
+  font-weight: 400;
+}
+
+/* 4 cards in a perfect horizontal row */
+main > section:nth-of-type(3) > div {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 0 20px;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Each card */
+main > section:nth-of-type(3) > div > div {
+  flex: 0 0 300px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+main > section:nth-of-type(3) > div > div:hover {
+  transform: translateY(-10px);
+}
+
+/* Tutorial thumbnail */
+main > section:nth-of-type(3) > div > div > img:first-child {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Purple Play Button */
+main > section:nth-of-type(3) > div > div::before {
+  content: "Play";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 68px;
+  height: 68px;
+  background: rgba(194, 113, 255, 0.95);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 26px;
+  pointer-events: none;
+  box-shadow: 0 8px 25px rgba(194,113,255,0.4);
+}
+
+/* Title */
+main > section:nth-of-type(3) h3 {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 25px 20px 10px;
+  color: #05012c;
+}
+
+/* Description */
+main > section:nth-of-type(3) > div > div > p {
+  padding: 0 20px;
+  font-size: 15px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Author row */
+main > section:nth-of-type(3) > div > div > div:nth-child(4) {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+main > section:nth-of-type(3) > div > div > div:nth-child(4) img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+main > section:nth-of-type(3) > div > div > div:nth-child(4) h4 {
+  color: #c271ff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Rating + Duration row */
+main > section:nth-of-type(3) > div > div > div:nth-child(5) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 25px;
+}
+
+main > section:nth-of-type(3) .fa-star {
+  color: #f39c12;
+  font-size: 16px;
+}
+
+main > section:nth-of-type(3) > div > div > div:nth-child(5) > p {
+  color: #c271ff;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* Mobile: horizontal scroll */
+@media (max-width: 768px) {
+  main > section:nth-of-type(3) {
+    padding: 80px 40px;
+  }
+  main > section:nth-of-type(3) h2 {
+    font-size: 32px;
+    margin-bottom: 60px;
+  }
+}
+
+/* FREE MEMBERSHIP SECTION - EXACTLY LIKE YOUR IMAGE */
+
+main > section:nth-of-type(4) {
+  background: #0f0e1a;
+  padding: 120px 80px;
+  text-align: center;
+}
+
+main > section:nth-of-type(4) h2 {
+  font-size: 36px;
+  color: #c271ff;
+  margin-bottom: 100px;
+  font-weight: 400;
+}
+
+/* 4 cards perfectly horizontal */
+main > section:nth-of-type(4) > div {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 100px;
+  flex-wrap: nowrap;
+  margin-bottom: 100px;
+  overflow-x: auto;
+  padding: 0 20px;
+  -webkit-overflow-scrolling: touch;
+}
+
+main > section:nth-of-type(4) > div > div {
+  flex: 0 0 260px;
+  text-align: center;
+}
+
+main > section:nth-of-type(4) img {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 30px;
+  filter: brightness(0) invert(1); /* makes the smiley white */
+}
+
+main > section:nth-of-type(4) h3 {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+main > section:nth-of-type(4) p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+/* Purple button */
+main > section:nth-of-type(4) button {
+  background: #c271ff;
+  color: white;
+  border: none;
+  padding: 16px 42px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 15px 35px rgba(194, 113, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+main > section:nth-of-type(4) button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(194, 113, 255, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  main > section:nth-of-type(4) > div {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  main > section:nth-of-type(4) {
+    padding: 100px 40px;
+  }
+  main > section:nth-of-type(4) h2 {
+    font-size: 32px;
+    margin-bottom: 80px;
+  }
+  main > section:nth-of-type(4) > div {
+    gap: 50px;
+  }
+}
+
+/* F.A.Q. SECTION - EXACTLY LIKE YOUR IMAGE */
+
+main > section:nth-of-type(5) {
+  background: white;
+  color: #05012c;
+  padding: 140px 80px 160px;
+  text-align: center;
+}
+
+main > section:nth-of-type(5) h2 {
+  font-size: 50px;
+  font-weight: 300;
+  letter-spacing: 8px;
+  color: #05012c;
+  margin-bottom: 120px;
+}
+
+/* Two columns layout */
+main > section:nth-of-type(5) > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 120px 80px;
+  max-width: 1300px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Each question block */
+main > section:nth-of-type(5) h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #05012c;
+  margin-bottom: 20px;
+}
+
+main > section:nth-of-type(5) p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+}
+
+/* Responsive – stack on mobile */
+@media (max-width: 992px) {
+  main > section:nth-of-type(5) > div {
+    grid-template-columns: 1fr;
+    gap: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  main > section:nth-of-type(5) {
+    padding: 100px 40px;
+  }
+  main > section:nth-of-type(5) h2 {
+    font-size: 40px;
+    letter-spacing: 6px;
+    margin-bottom: 80px;
+  }
+  main > section:nth-of-type(5) h3 {
+    font-size: 20px;
+  }
+}
+
+/* FOOTER - EXACTLY LIKE YOUR IMAGE */
+
+footer {
+  background: #0f0e1a;
+  padding: 80px 80px 60px;
+  color: white;
+}
+
+footer > section > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto 50px;
+}
+
+footer img {
+  height: 38px;
+}
+
+/* Social icons */
+footer .fa-brands {
+  font-size: 28px;
+  color: white;
+  margin-left: 30px;
+  transition: opacity 0.3s ease;
+}
+
+footer .fa-brands:hover {
+  opacity: 0.7;
+}
+
+/* Copyright */
+footer p {
+  text-align: center;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.5px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  footer {
+    padding: 70px 40px 50px;
+  }
+  
+  footer > section > div {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  footer .fa-brands {
+    margin: 0 15px;
+  }
+}
